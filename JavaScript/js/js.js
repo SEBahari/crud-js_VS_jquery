@@ -2,7 +2,7 @@
 const form = document.getElementById('users-form');
 const list = document.getElementById('users-list').getElementsByTagName('tbody')[0];
 const nameInput = document.getElementById('name');
-const familyInput = document.getElementById('family');
+const lastNameInput = document.getElementById('lastName');
 const mobileInput = document.getElementById('mobile');
 const emailInput = document.getElementById('email');
 
@@ -25,7 +25,7 @@ function addNewUser(data) {
     let newRow = list.insertRow(list.length);
 
     newRow.insertCell(0).innerHTML = data.name;
-    newRow.insertCell(1).innerHTML = data.family;
+    newRow.insertCell(1).innerHTML = data.lastName;
     newRow.insertCell(2).innerHTML = data.mobile;
     newRow.insertCell(3).innerHTML = data.email;
 
@@ -39,7 +39,7 @@ function addNewUser(data) {
 function editUser(editLink) {
     selectedRow = editLink.parentElement.parentElement;
     nameInput.value = selectedRow.cells[0].innerHTML;
-    familyInput.value = selectedRow.cells[1].innerHTML;
+    lastNameInput.value = selectedRow.cells[1].innerHTML;
     mobileInput.value = selectedRow.cells[2].innerHTML;
     emailInput.value = selectedRow.cells[3].innerHTML;
 }
@@ -47,7 +47,7 @@ function editUser(editLink) {
 //  Update
 function updateUser(data) {
     selectedRow.cells[0].innerHTML = data.name;
-    selectedRow.cells[1].innerHTML = data.family;
+    selectedRow.cells[1].innerHTML = data.lastName;
     selectedRow.cells[2].innerHTML = data.mobile;
     selectedRow.cells[3].innerHTML = data.email;
 
@@ -68,7 +68,7 @@ function deleteUser(deleteLink) {
 function readFormData() {
     let formData = {};
     formData.name = nameInput.value;
-    formData.family = familyInput.value;
+    formData.lastName = lastNameInput.value;
     formData.mobile = mobileInput.value;
     formData.email = emailInput.value;
     return formData;
