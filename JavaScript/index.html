@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Users List</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  </style>
+</head>
+<body>
+<table id="root" style="width: 100%;">
+  <tr>
+    <td>
+      <form method="post" id="users-form" novalidate="true" autocomplete="off">
+        <input name="name" id="name" type="text" placeholder="name">
+        <br>
+        <input name="family" id="family" type="text" placeholder="family">
+        <br>
+        <input name="mobile" id="mobile" type="number" placeholder="mobile">
+        <br>
+        <input name="email" id="email" type="email" placeholder="email">
+        <br>
+        <input name="submit" type="submit" value="add">
+      </form>
+    </td>
+    <td>
+      <table id="users-list" border="1">
+        <thead>
+        <tr style="background: gray;">
+          <td style="padding: 1rem 2rem;">name</td>
+          <td style="padding: 1rem 2rem;">family</td>
+          <td style="padding: 1rem 2rem;">mobile</td>
+          <td style="padding: 1rem 2rem;">email</td>
+          <td style="padding: 1rem 2rem;">edit</td>
+          <td style="padding: 1rem 2rem;">delete</td>
+        </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!--  Without jQuery  -->
+<script src="js/js.js"></script>
+</body>
+</html>
